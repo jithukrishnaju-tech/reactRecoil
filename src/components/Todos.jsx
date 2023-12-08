@@ -1,9 +1,9 @@
-import { useRecoilState } from "recoil";
 import { todoState } from "../state/atom/todo";
-import { useState } from "react";
-import { useRecoilValue } from "recoil";
-import Todo from "./Todo";
 import { charCountState } from "../state/selector/totaltodos";
+import { useState } from "react";
+import { useRecoilValue, useRecoilState } from "recoil";
+import Todo from "./Todo";
+
 export default function Todos() {
   const [todos, setTodos] = useRecoilState(todoState);
   const [text, setMessage] = useState("");
